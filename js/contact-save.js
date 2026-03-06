@@ -5,7 +5,7 @@ function saveContact(name, phone, email = "", department = "", company = "한국
 VERSION:3.0
 FN:${company} ${name}
 N:${name};;;;
-ORG:${company};${department}
+ORG:${company}
 TITLE:${department}
 TEL;TYPE=CELL:${phone}
 EMAIL:${email}

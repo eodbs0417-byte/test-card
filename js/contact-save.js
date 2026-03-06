@@ -1,10 +1,14 @@
 function saveContact(name, phone, email = "", department = "", company = "한국도로공사서비스") {
 
+  const lastName = name.slice(0,1);
+  const firstName = name.slice(1);
+
+  const displayName = company + " " + name;
   const vCardData =
 `BEGIN:VCARD
 VERSION:3.0
-FN:${name}
-N:${name};;;;
+FN:${displayName}
+N:${lastName};${firstName};;;
 ORG:${company};${department}
 TEL;TYPE=CELL:${phone}
 EMAIL:${email}

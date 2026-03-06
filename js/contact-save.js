@@ -1,10 +1,13 @@
-function saveContact(name, phone, email = "", company = "한국도로공사서비스") {
+function saveContact(name, phone, email = "", department = "", company = "한국도로공사서비스") {
+
+  const displayName = company + " " + department + " " + name;
 
   const vCardData =
 `BEGIN:VCARD
 VERSION:3.0
-
-N:한국도로공사서비스;${name};;;;
+FN:${displayName}
+N:${name};;;;
+ORG:${company};${department}
 TEL;TYPE=CELL:${phone}
 EMAIL:${email}
 END:VCARD`;
